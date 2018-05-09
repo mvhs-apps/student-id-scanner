@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Material+Icons|Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/main.css<?php echo $versionString; ?>">
+	</head>
+	<body>
+		<div style="position: absolute; bottom: 0; left: 0; right: 0; overflow: hidden; z-index: -1; top: 0;"><svg style="position: relative; height: 100%; width: 100%; overflow: hidden;" jsname="BUfzDd" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 1440 810" preserveAspectRatio="xMinYMin slice" aria-hidden="true"><path fill="#efefee" d="M592.66 0c-15 64.092-30.7 125.285-46.598 183.777C634.056 325.56 748.348 550.932 819.642 809.5h419.672C1184.518 593.727 1083.124 290.064 902.637 0H592.66z"></path><path fill="#f6f6f6" d="M545.962 183.777c-53.796 196.576-111.592 361.156-163.49 490.74 11.7 44.494 22.8 89.49 33.1 134.883h404.07c-71.294-258.468-185.586-483.84-273.68-625.623z"></path><path fill="#f7f7f7" d="M153.89 0c74.094 180.678 161.088 417.448 228.483 674.517C449.67 506.337 527.063 279.465 592.56 0H153.89z"></path><path fill="#fbfbfc" d="M153.89 0H0v809.5h415.57C345.477 500.938 240.884 211.874 153.89 0z"></path><path fill="#ebebec" d="M1144.22 501.538c52.596-134.583 101.492-290.964 134.09-463.343 1.2-6.1 2.3-12.298 3.4-18.497 0-.2.1-.4.1-.6 1.1-6.3 2.3-12.7 3.4-19.098H902.536c105.293 169.28 183.688 343.158 241.684 501.638v-.1z"></path><path fill="#e1e1e1" d="M1285.31 0c-2.2 12.798-4.5 25.597-6.9 38.195C1321.507 86.39 1379.603 158.98 1440 257.168V0h-154.69z"></path><path fill="#e7e7e7" d="M1278.31,38.196C1245.81,209.874 1197.22,365.556 1144.82,499.838L1144.82,503.638C1185.82,615.924 1216.41,720.211 1239.11,809.6L1439.7,810L1439.7,256.768C1379.4,158.78 1321.41,86.288 1278.31,38.195L1278.31,38.196z"></path></svg></div>
+		<div id="nav-bar">
+			<div>
+				<img src="images/logo.png" height="60px" style="display: inline-block; margin-top: 5px;">
+				<h1 style="display: inline; margin-left: 20px; font-family: 'Open Sans';">Senior Checkout 2018</h1>
+			</div>
+		</div>
+		<button style="margin: 20px; width: auto;" onclick="init(this);">Click to initialize data</button>
+		<div style="padding: 20px; display: none;" id="main-scanning-area">
+			<div id="progress">
+				<div id="bar">Loading...</div>
+			</div>
+			<div id="main-div" style="display: none;">
+				<input type="number" id="input-elem" placeholder="Place cursor here and scan" onblur="checkForHandler()" onkeyup="checkForHandler()">
+				<br>
+				<br>
+				<button onclick="checkForHandler()">Check Id</button> <- Click here if it doesn't load content automatically
+				<h1 id="main-details"></h1>
+
+				<div id="response">
+					<div class="card">
+						<h2 class="section-title">Student Status</h2>
+						<h3 id="things-to-do"></h3>
+					</div>
+					<br>
+					<br>
+					<div class="card" style="animation-delay: 0.1s;">
+						<h2 class="section-title">Student Information</h2>
+						<h3><span style="font-weight: bold;">Name:</span> <span id="first-name"></span> <span id="last-name"></span></h3>
+						<h3><span style="font-weight: bold;">Email:</span> <span id="email"></span></h3>
+						<h3><span style="font-weight: bold;">Student ID Number:</span> <span id="student-id-number"></span></h3>
+						<h3><span style="font-weight: bold;">Permanent Student ID Number:</span> <span id="perm-student-id-number"></span></h3>
+						<h3><span style="font-weight: bold;">Grade:</span> <span id="grade"></span></h3>
+						<h3><span style="font-weight: bold;">Notes:</span> <span id="student-notes"></span></h3>
+					</div>
+				</div>
+			</div>
+			<p style="margin-top: 15px; font-size: 24px; background: #fccb0b; display: inline-block; padding: 4px; border-radius: 4px;" id="last-updated">Updating...</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/main.js<?php echo $versionString; ?>"></script>
+</html>
